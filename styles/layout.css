@@ -1,0 +1,307 @@
+/* mobile first */
+body{
+	background-color: #142872;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-family: avenir, sans-serif;
+	display: grid;
+	grid-template-colums: 1fr 1fr;
+	grid-template-areas:
+			"header header"
+			"ad1 ad1"
+			"main main"
+			"ad2 ad2";
+}
+
+.header{ 
+	background-color: white; 
+	grid-area: header;
+	padding-bottom: 5px;
+}
+
+img {
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.main{
+	grid-area: main;
+	margin: 0 auto;
+	display: block;
+	margin-top: 10px;
+}
+
+#datum {
+	color: white;
+	font-size: 1.8em;
+	font-family: bitter;
+
+}
+.ad1 {
+	grid-area: ad1;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.ad2 {
+	grid-area: ad2;
+	margin: 0 auto;
+	display: block;
+	margin-top: 80px;
+}
+
+#plaatje {
+	width: 50px;
+	height: 50px;
+	background-size: 100%;
+	position: relative;
+}
+
+/* klok */
+#klok {
+	width: 250px;
+	height: 250px;
+	background-image: url("../img/aarde.png");
+	background-size: 100%;
+	border-radius: 50%;
+	box-shadow: 0 0 20px 0 black;
+	position: relative;
+}
+
+#hrs-wijzer{
+	width: 4px;
+	height: 25%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -2px;
+	border-radius: 100%;
+}
+
+#min-wijzer{
+	width: 3px;
+	height: 40%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	margin-left: -1px;
+	border-radius: 100%;
+}
+
+#sec-wijzer{
+	width: 1px;
+	height: 50%;
+	background-color: white;
+	transform-origin: 50% 80%;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	border-radius: 100%;
+}
+
+/* nummers op de klok */
+.num{
+	height: 100%;
+	position: absolute;
+	left: calc(50% - 0.5em);
+}
+
+.num div {
+	width: 0.8em;
+	line-height: 2.4em;
+	color: white;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 1em;
+}
+
+.num1 {
+	transform: rotate(30deg);
+}
+
+.num1 div {
+	transform: rotate(-30deg);
+}
+
+.num2 {
+	transform: rotate(60deg);
+}
+
+.num2 div {
+	transform: rotate(-60deg);
+}
+
+.num3 {
+	transform: rotate(90deg);
+}
+
+.num3 div {
+	transform: rotate(-90deg);
+}
+
+.num4 {
+	transform: rotate(120deg);
+}
+
+.num4 div {
+	transform: rotate(-120deg);
+}
+
+.num5 {
+	transform: rotate(150deg);
+}
+
+.num5 div {
+	transform: rotate(-150deg);
+}
+
+.num6 {
+	transform: rotate(180deg);
+}
+
+.num6 div {
+	transform: rotate(-180deg);
+}
+
+.num7 {
+	transform: rotate(210deg);
+}
+
+.num7 div {
+	transform: rotate(-210deg);
+}
+
+.num8 {
+	transform: rotate(240deg);
+}
+
+.num8 div {
+	transform: rotate(-240deg);
+}
+
+.num9 {
+	transform: rotate(270deg);
+}
+
+.num9 div {
+	transform: rotate(-270deg);
+}
+
+.num10 {
+	transform: rotate(300deg);
+}
+
+.num10 div {
+	transform: rotate(-300deg);
+}
+
+.num11 {
+	transform: rotate(330deg);
+}
+
+.num11 div {
+	transform: rotate(-330deg);
+}
+
+.num12 {
+	transform: rotate(360deg);
+}
+
+.num12 div {
+	transform: rotate(-360deg);
+}
+
+
+
+/* Ipad formaat */
+@media only screen and (min-width: 640px){
+	img {
+		width: 300px;
+	}
+
+	.ad1 {
+		margin-top: 30px;
+	}
+
+	.ad2 {
+		margin-top: 100px;
+	}
+	#klok {
+		width: 280px;
+		height: 280px;
+	}
+
+	#plaatje {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+/* klein desktop */
+@media screen and (min-width: 1024px) {
+	body {
+	display: grid;
+	grid-template-colums: 1fr 1fr 1fr;
+	grid-template-areas:
+			"header header header"
+			"ad1 ad1 ad1"
+			"main ad2 ad2";
+	}
+	
+	#datum {
+		font-size: 2em;
+	}
+
+
+	.ad1 {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	#klok {
+		width: 300px;
+		height: 300px;
+	}
+
+	.num div {
+		font-size: 1.2em;
+	}
+
+	#plaatje{
+		width: 100px;
+		height: 100px;
+	}
+}
+
+/* desktop groot */
+@media screen and (min-width: 1440px) {
+	img {
+		width: 400px;
+	}
+
+	#datum {
+		font-size: 2.6em;
+	}
+
+	#klok {
+		width: 350px;
+		height: 350px;
+	}
+
+	.num div {
+		font-size: 1.4em;
+	}
+
+	#plaatje {
+		width: 110px;
+		height: 110px;
+	}
+}
+
